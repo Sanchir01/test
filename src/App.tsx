@@ -33,7 +33,7 @@ function App() {
 			</h1>
 			<video
 				onTimeUpdate={hanleTimeUpdata}
-				className='relative'
+				className=' relative'
 				ref={videoRef}
 				controls
 			>
@@ -42,14 +42,9 @@ function App() {
 					type='video/mp4'
 				></source>
 			</video>
-			<div className='absolute gap-4 grid grid-cols-5  text-center items-center  mt-20'>
-				{data?.map((element, i) => (
-					<MiniBlock
-						item={element}
-						videoRef={videoRef}
-						key={element.id}
-						i={0}
-					/>
+			<div className='  text-center items-center  mt-20'>
+				{data?.map(element => (
+					<MiniBlock item={element} videoRef={videoRef} key={element.id} />
 				))}
 			</div>
 			<div className='grid grid-cols-5 gap-4 text-center mt-10'>
